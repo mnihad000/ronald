@@ -38,11 +38,11 @@
 
 .word {
   fill: rgb(126 126 126 / 0.34);
-  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-  font-size: 108px;
-  font-style: italic;
-  font-weight: 600;
-  letter-spacing: -0.08em;
+  font-family: var(--font-retro-mono), "VT323", monospace;
+  font-size: 114px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.03em;
   text-anchor: middle;
   dominant-baseline: middle;
 }
@@ -174,13 +174,13 @@
 
 @media (max-width: 768px) {
   .word {
-    font-size: 88px;
+    font-size: 96px;
   }
 }
 
 @media (max-width: 520px) {
   .word {
-    font-size: 68px;
+    font-size: 76px;
   }
 
   .stage {

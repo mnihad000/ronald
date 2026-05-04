@@ -16,7 +16,7 @@ export default function Page() {
         <SlideTabs tabs={NAV_TABS} sticky />
       </div>
 
-      <div className="px-4 pb-10 md:px-10">
+      <div className="px-4 pb-10 pt-24 md:px-10 md:pt-28">
         <section id="home" className="scroll-mt-28">
           <SplineSceneBasic />
         </section>

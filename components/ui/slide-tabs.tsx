@@ -55,7 +55,7 @@ export const SlideTabs = ({ tabs = DEFAULT_TABS, sticky = false, onTabChange }: 
   }, [selected, tabs])
 
   const wrapperClassName = sticky
-    ? "sticky top-0 z-50 mx-auto w-fit rounded-full border border-black/10 bg-white/85 p-1 shadow-[0_8px_30px_rgba(0,0,0,0.08)] backdrop-blur-md"
+    ? "fixed left-1/2 top-4 z-50 w-fit -translate-x-1/2 rounded-full border border-black/10 bg-white/85 p-1 shadow-[0_8px_30px_rgba(0,0,0,0.08)] backdrop-blur-md"
     : ""
 
   const handleTabClick = (index: number) => {

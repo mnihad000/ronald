@@ -1,4 +1,5 @@
 import { CircleUserRound } from "lucide-react"
+import { AnimatedName } from "@/components/ui/animated-name"
 import { HeroContactSection } from "@/components/ui/hero-contact-section"
 import { HeroProjectsSection } from "@/components/ui/hero-projects-section"
 
@@ -19,9 +20,10 @@ export function ProfileSection() {
           <div className="floating-accent-dots" aria-hidden="true" />
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">Hi, my name is</p>
-            <h2 className="mt-2 text-4xl font-bold tracking-tight text-neutral-900 md:text-6xl">
-              Ronald Beltran
-            </h2>
+            <AnimatedName
+              text="Ronald Beltran"
+              className="mt-2 text-4xl font-bold tracking-tight text-[#d65a12] drop-shadow-[0_4px_18px_rgba(214,90,18,0.2)] md:text-6xl"
+            />
             <p className="mt-3 text-xl font-medium text-neutral-700">
               Mechanical Engineering Major at CCNY
             </p>

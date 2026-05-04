@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist, Geist_Mono, VT323 } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -11,6 +11,12 @@ const fontMono = Geist_Mono({
   variable: "--font-mono",
 })
 
+const retroMono = VT323({
+  subsets: ["latin"],
+  variable: "--font-retro-mono",
+  weight: "400",
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,7 +26,13 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", geist.variable)}
+      className={cn(
+        "antialiased",
+        fontMono.variable,
+        retroMono.variable,
+        "font-sans",
+        geist.variable
+      )}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>
