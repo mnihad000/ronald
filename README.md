@@ -1,3 +1,7 @@
+# Deployed as a freelance project to showcase their portfolio
+
+https://ronald-beltran.vercel.app/
+
 # Next.js template
 
 This is a Next.js template with shadcn/ui.
