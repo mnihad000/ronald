@@ -1,0 +1,11 @@
+2026/05/04-12:01:57.331 6678 Reusing MANIFEST c:\Users\nihad\Desktop\Ronald\.edge-headless\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/05/04-12:01:57.332 6678 Recovering log #3
+2026/05/04-12:01:57.374 6678 Level-0 table #3: started
+2026/05/04-12:01:57.408 6678 Level-0 table #3: 682137 bytes OK
+2026/05/04-12:01:57.408 6678 Recovering log #4
+2026/05/04-12:01:57.409 6678 Reusing old log c:\Users\nihad\Desktop\Ronald\.edge-headless\Default\EdgeCoupons/coupons_data.db/000004.log 
+2026/05/04-12:01:57.411 6678 Delete type=0 #3
+2026/05/04-12:01:57.411 6678 Delete type=2 #5
+2026/05/04-12:01:57.778 5f80 Level-0 table #6: started
+2026/05/04-12:01:57.802 5f80 Level-0 table #6: 682296 bytes OK
+2026/05/04-12:01:57.803 5f80 Delete type=0 #4

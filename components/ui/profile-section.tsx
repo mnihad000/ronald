@@ -1,7 +1,5 @@
 import { CircleUserRound } from "lucide-react"
 import { AnimatedName } from "@/components/ui/animated-name"
-import { HeroContactSection } from "@/components/ui/hero-contact-section"
-import { HeroProjectsSection } from "@/components/ui/hero-projects-section"
 
 const EXPERIENCE_ITEMS = Array.from({ length: 4 }, () => ({
   date: "Janurar 2024- March 2024",
@@ -94,9 +92,6 @@ export function ProfileSection() {
           </div>
         </div>
       </div>
-
-      <HeroProjectsSection />
-      <HeroContactSection />
     </section>
   )
 }

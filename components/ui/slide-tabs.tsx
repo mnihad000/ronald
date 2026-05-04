@@ -74,6 +74,61 @@ export const SlideTabs = ({ tabs = DEFAULT_TABS, sticky = false, onTabChange }: 
   }, [selected, tabs])
 
   useEffect(() => {
+    let frameId = 0
+
+    const updateSelectedFromScroll = () => {
+      frameId = 0
+
+      const viewportHeight = window.innerHeight
+      const focusLine = Math.min(Math.max(viewportHeight * 0.32, 140), viewportHeight * 0.5)
+
+      let nextSelected = selected
+      let bestDistance = Number.POSITIVE_INFINITY
+
+      tabs.forEach((tab, index) => {
+        const section = document.getElementById(tab.targetId)
+        if (!section) return
+
+        const rect = section.getBoundingClientRect()
+        const isInRange = rect.top <= focusLine && rect.bottom >= focusLine
+
+        if (isInRange) {
+          nextSelected = index
+          bestDistance = -1
+          return
+        }
+
+        if (bestDistance === -1) return
+
+        const distance = Math.min(Math.abs(rect.top - focusLine), Math.abs(rect.bottom - focusLine))
+        if (distance < bestDistance) {
+          bestDistance = distance
+          nextSelected = index
+        }
+      })
+
+      setSelected((current) => (current === nextSelected ? current : nextSelected))
+    }
+
+    const scheduleUpdate = () => {
+      if (frameId !== 0) return
+      frameId = window.requestAnimationFrame(updateSelectedFromScroll)
+    }
+
+    scheduleUpdate()
+    window.addEventListener("scroll", scheduleUpdate, { passive: true })
+    window.addEventListener("resize", scheduleUpdate)
+
+    return () => {
+      if (frameId !== 0) {
+        window.cancelAnimationFrame(frameId)
+      }
+      window.removeEventListener("scroll", scheduleUpdate)
+      window.removeEventListener("resize", scheduleUpdate)
+    }
+  }, [selected, tabs])
+
+  useEffect(() => {
     const proximityPadding = 44
 
     const handlePointerMove = (event: MouseEvent) => {

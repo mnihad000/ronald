@@ -1,4 +1,6 @@
 import { SplineSceneBasic } from "@/components/ui/demo"
+import { HeroContactSection } from "@/components/ui/hero-contact-section"
+import { HeroProjectsSection } from "@/components/ui/hero-projects-section"
 import { ProfileSection } from "@/components/ui/profile-section"
 import { SlideTabs, type SlideTabItem } from "@/components/ui/slide-tabs"
 
@@ -21,6 +23,8 @@ export default function Page() {
           <SplineSceneBasic />
         </section>
         <ProfileSection />
+        <HeroProjectsSection />
+        <HeroContactSection />
       </div>
     </div>
   )
